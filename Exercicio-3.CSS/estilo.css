@@ -1,0 +1,48 @@
+body{
+    color: white;
+     background: url(Tijolos-a-vista.jpg) repeat; 
+     font-family: Verdana, Arial, sans-serif;
+}
+
+h1{ 
+    text-decoration: underline;
+    text-transform: uppercase;
+    font-size: 30pt;
+    font-weight: bold;
+}
+
+h2{
+    text-transform: capitalize;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 24pt;
+}
+
+h3{
+    text-transform: capitalize;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 20pt;
+}
+
+p{
+   text-indent: 26px;  
+}
+
+a{
+  text-decoration: underline;  
+  font-size: small;
+  font-weight: bold;
+  color: darkolivegreen;  
+}
+
+a:hover{
+           color: lightblue;
+           font-size: larger;
+           text-decoration: overline underline;
+           text-shadow: -3px 3px 1px darkgray 
+}
+
+ul{
+    list-style-image: url(marcador.png);
+}

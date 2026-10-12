@@ -1,0 +1,21 @@
+    h1{
+        color: blue;
+     }
+
+     h2{
+        color: red;
+        background-color: gray;
+     }
+
+     h3{
+        color: green;
+     }
+
+     body{
+          color: black;
+          background-image: linear-gradient(to left top,#156b03, #2cf205);
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+          background-position: bottom;
+          background-size: cover;
+     }
