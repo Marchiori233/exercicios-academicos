@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TechZone — Nossos Produtos</title>
+  <style>
+    * { 
+      margin: 0; 
+      padding: 0; 
+      box-sizing: border-box; 
+    }
+    body { 
+      background-color: #050c14; 
+      color: #ffffff; 
+      font-family: Arial, Helvetica, sans-serif; 
+    }
+    header { 
+      background-color: #0b1522; 
+      border-bottom: 1px solid #142234; 
+      position: sticky; 
+      top: 0; 
+      z-index: 100; 
+    }
+    .container-header { 
+      max-width: 1200px; 
+      margin: 0 auto; 
+      padding: 15px 20px; 
+      display: flex; 
+      justify-content: space-between; 
+      align-items: center; 
+    }
+    .logo-link { 
+      display: flex; 
+      align-items: center; 
+      text-decoration: none; 
+      color: #ffffff; 
+      font-size: 1.4rem; 
+      font-weight: bold; 
+    }
+    .caixa-icone { 
+      width: 32px; 
+      height: 32px; 
+      background-color: #00aaff; 
+      border-radius: 6px; 
+      display: flex; 
+      align-items: center; 
+      justify-content: center; 
+      margin-right: 8px; 
+    }
+    .raio-svg { 
+      width: 18px; 
+      height: 18px; 
+      fill: #ffffff; 
+    }
+    header span { 
+      color: #00aaff; 
+    }
+    nav { 
+      display: flex; 
+      flex-wrap: wrap; 
+    }
+    nav a { 
+      color: #8fa3b1; 
+      font-weight: bold; 
+      border: 2px solid transparent; 
+      border-radius: 50px; 
+      padding: 6px 14px; 
+      text-decoration: none; 
+      transition: all 0.2s; 
+      font-size: 0.9rem; 
+      margin-left: 5px; 
+    }
+    nav a:hover, nav a.active { 
+      border-color: #00aaff; 
+      color: #00aaff; 
+    }
+
+    .titulo-vitrine { 
+      max-width: 1200px; 
+      margin: 40px auto 20px auto; 
+      padding: 0 20px; 
+      font-size: 2rem; 
+    }
+    
+    /* Grade de Produtos */
+    .vitrine-container { 
+      max-width: 1200px; 
+      margin: 0 auto 60px auto; 
+      padding: 0 20px; 
+      display: flex; 
+      flex-wrap: wrap; 
+      gap: 20px; 
+    }
+    .produto-card { 
+      background-color: #0b1522; 
+      border: 1px solid #142234; 
+      border-radius: 12px; 
+      width: calc(33.333% - 14px); 
+      padding: 20px; 
+      display: flex; 
+      flex-direction: column; 
+      text-decoration: none; 
+      color: #ffffff; 
+      transition: transform 0.2s; 
+    }
+    .produto-card:hover { 
+      transform: translateY(-5px); 
+      border-color: #00aaff; 
+    }
+    .img-vitrine-box { 
+      width: 100%; 
+      height: 220px; 
+      display: flex; 
+      align-items: center; 
+      justify-content: center; 
+      margin-bottom: 15px; 
+      background-color: #050c14; 
+      border-radius: 8px; 
+      padding: 10px; 
+    }
+    .img-vitrine-box img { 
+      max-width: 100%; 
+      max-height: 100%; 
+      object-fit: contain; 
+    }
+    .card-cat { 
+      color: #00aaff; 
+      font-size: 0.75rem; 
+      font-weight: bold; 
+      text-transform: uppercase; 
+      margin-bottom: 5px; 
+    }
+    .card-tit { 
+      font-size: 1.2rem; 
+      font-weight: bold; 
+      margin-bottom: 8px; 
+      height: 25px; 
+      overflow: hidden; 
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+    .card-desc {
+      font-size: 0.88rem;
+      color: #8fa3b1;
+      line-height: 1.4;
+      margin-bottom: 15px;
+      height: 78px; 
+      max-height: 78px;
+      overflow: hidden;
+      display: block;
+    }
+    .card-preco { 
+      font-size: 1.4rem; 
+      font-weight: bold; 
+      color: #00aaff; 
+      margin-top: auto; 
+    }
+    .card-parc { 
+      font-size: 0.85rem; 
+      color: #6c7d93; 
+      margin-top: 2px;
+      margin-bottom: 15px; 
+    }
+    .btn-ver { 
+      background-color: #00aaff; 
+      color: #ffffff; 
+      text-align: center; 
+      padding: 10px; 
+      border-radius: 6px; 
+      font-weight: bold; 
+      font-size: 0.9rem; 
+    }
+
+    footer { 
+      background-color: #0b1522; 
+      border-top: 1px solid #142234; 
+      padding: 40px 20px; 
+      text-align: center; 
+    }
+    .footer-logo { 
+      display: inline-flex; 
+      align-items: center; 
+      font-size: 1.3rem; 
+      font-weight: bold; 
+      text-decoration: none; 
+      color: #ffffff; 
+      margin-bottom: 10px; 
+    }
+    .footer-logo span { 
+      color: #00aaff; 
+    }
+    footer p { 
+      color: #51677a; 
+      font-size: 0.85rem; 
+      margin-bottom: 20px; 
+    }
+    .footer-nav { 
+      display: flex; 
+      justify-content: center; 
+      flex-wrap: wrap; 
+    }
+    .footer-nav a { 
+      color: #8fa3b1; 
+      text-decoration: none; 
+      font-size: 0.9rem; 
+      margin: 5px 10px; 
+    }
+    .footer-nav a:hover { 
+      color: #00aaff; 
+    }
+
+    @media (max-width: 992px) { 
+      .produto-card { 
+        width: calc(50% - 10px); 
+      } 
+    }
+    @media (max-width: 768px) { 
+      .container-header { 
+        flex-direction: column; 
+        gap: 15px; 
+      } 
+      nav { 
+        justify-content: center; 
+      } 
+      .produto-card { 
+        width: 100%; 
+      } 
+    }
+    
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container-header">
+      <a href="home.html" class="logo-link">
+        <div class="caixa-icone"><svg class="raio-svg" viewBox="0 0 24 24"><polygon points="13,2 4.5,13.5 11,13.5 11,22 19.5,10.5 13,10.5"/></svg></div>Tech<span>Zone</span>
+      </a>
+      <nav>
+        <a href="home.html">Home</a>
+        <a href="produtos.html" class="active">Produtos</a>
+        <a href="noticias.html">Notícias</a>
+        <a href="cadastro.html">Cadastro</a>
+        <a href="contato.html">Contato</a>
+        <a href="projeto.html">Projeto</a>
+        <a href="sobre.html">Sobre Nós</a>
+      </nav>
+    </div>
+  </header>
+
+  <h1 class="titulo-vitrine">Catálogo de Produtos</h1>
+
+  <main class="vitrine-container">
+    
+    <a href="produtos1.html" class="produto-card">
+      <div class="img-vitrine-box"><img src="../images.jpg/ip15-imagem-secundaria3.jpg" alt="iPhone 15"></div>
+      <span class="card-cat">Smartphones</span>
+      <h2 class="card-tit">iPhone 15 Apple</h2>
+      <p class="card-desc">Contando com o ecossistema premium da Apple, traz a inovadora Dynamic Island para notificações em tempo real, um poderoso sensor fotográfico principal de 48 MP e o chip A16 Bionic para garantir desempenho fluido e máxima eficiência energética.</p>
+      <p class="card-preco">R$ 4.899,00</p>
+      <span class="card-parc">12x de R$ 408,25 sem juros</span>
+      <div class="btn-ver">Ver Detalhes</div>
+    </a>
+
+    <a href="produtos2.html" class="produto-card">
+      <div class="img-vitrine-box"><img src="../images.jpg/ps5-1-.jpg" alt="PlayStation 5"></div>
+      <span class="card-cat">Consoles</span>
+      <h2 class="card-tit">PlayStation 5</h2>
+      <p class="card-desc">Entre na nova geração dos videojogos com um carregamento quase instantâneo feito pelo SSD customizado de altíssima velocidade. Desfrute de maior imersão nos seus títulos favoritos com suporte para feedback tátil, gatilhos adaptáveis e áudio 3D.</p>
+      <p class="card-preco">R$ 3.999,00</p>
+      <span class="card-parc">12x de R$ 333,25 sem juros</span>
+      <div class="btn-ver">Ver Detalhes</div>
+    </a>
+
+    <a href="produtos3.html" class="produto-card">
+      <div class="img-vitrine-box"><img src="../images.jpg/tv-1.jpg" alt="Smart TV 4K 55"></div>
+      <span class="card-cat">Televisores</span>
+      <h2 class="card-tit">Smart TV 4K 55"</h2>
+      <p class="card-desc">Equipada com uma incrível tela de 55 polegadas, o painel Crystal UHD proporciona imagens incrivelmente realistas e cores vibrantes. Possui também um processador inteligente de upscaling 4K e design ultrafino que se adapta a qualquer ambiente.</p>
+      <p class="card-preco">R$ 2.499,00</p>
+      <span class="card-parc">12x de R$ 208,25 sem juros</span>
+      <div class="btn-ver">Ver Detalhes</div>
+    </a>
+
+    <a href="produtos4.html" class="produto-card">
+      <div class="img-vitrine-box"><img src="../images.jpg/sy-1.jpg" alt="Sony WH-1000XM5"></div>
+      <span class="card-cat">Áudio</span>
+      <h2 class="card-tit">Sony WH-1000XM5</h2>
+      <p class="card-desc">O auscultador sem fios topo de gama reescreve as regras para uma audição isolada através do melhor cancelamento ativo de ruído (ANC) do mercado. Conta com dois processadores que gerem 8 microfones, áudio de alta resolução e uma bateria monstruosa.</p>
+      <p class="card-preco">R$ 1.799,00</p>
+      <span class="card-parc">12x de R$ 149,91 sem juros</span>
+      <div class="btn-ver">Ver Detalhes</div>
+    </a>
+
+    <a href="produtos5.html" class="produto-card">
+      <div class="img-vitrine-box"><img src="../images.jpg/ap-1.jpg" alt="Apple Watch Series 10"></div>
+      <span class="card-cat">Áudio</span>
+      <h2 class="card-tit">Apple Watch Series 10</h2>
+      <p class="card-desc">Apresenta o marco de inovação com o corpo de alumínio mais fino e leve já feito pela Apple, ostentando também a maior tela de qualquer geração. Ideal para monitorizar a sua saúde com novos sensores avançados para apneia do sono e alertas cardíacos.</p>
+      <p class="card-preco">R$ 3.499,00</p>
+      <span class="card-parc">12x de R$ 291,58 sem juros</span>
+      <div class="btn-ver">Ver Detalhes</div>
+    </a>
+
+  </main>
+
+  <footer>
+    <a href="home.html" class="footer-logo">
+      <div class="caixa-icone"><svg class="raio-svg" viewBox="0 0 24 24"><polygon points="13,2 4.5,13.5 11,13.5 11,22 19.5,10.5 13,10.5"/></svg></div>Tech<span>Zone</span>
+    </a>
+    <p>Eletrônicos & Tecnologia — Qualidade que você pode confiar.</p>
+    <div class="footer-nav">
+      <a href="home.html">Home</a>
+      <a href="produtos.html">Produtos</a>
+      <a href="noticias.html">Notícias</a>
+      <a href="cadastro.html">Cadastro</a>
+      <a href="contato.html">Contato</a>
+      <a href="projeto.html">Projeto</a>
+      <a href="sobre.html">Sobre Nós</a>
+    </div>
+     <br><p>© 2026 TechZone. Trabalho acadêmico. — Breno Marchiori, Lucas ****.</p>
+  </footer>
+</body>
+</html>

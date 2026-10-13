@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TechZone — Quem Somos</title>
+  <style>
+    * { 
+      margin: 0; 
+      padding: 0; 
+      box-sizing: border-box; 
+    }
+    body { 
+      background-color: #050c14; 
+      color: #ffffff; 
+      font-family: Arial, Helvetica, sans-serif; 
+    }
+    header { 
+      background-color: #0b1522; 
+      border-bottom: 1px solid #142234; 
+      position: sticky; 
+      top: 0; 
+      z-index: 100; 
+    }
+    .container-header { 
+      max-width: 1200px; 
+      margin: 0 auto; 
+      padding: 15px 20px; 
+      display: flex; 
+      justify-content: space-between; 
+      align-items: center; 
+    }
+    .logo-link { 
+      display: flex; 
+      align-items: center; 
+      text-decoration: none; 
+      color: #ffffff; 
+      font-size: 1.4rem; 
+      font-weight: bold; 
+    }
+    .caixa-icone { 
+      width: 32px; 
+      height: 32px; 
+      background-color: #00aaff; 
+      border-radius: 6px; 
+      display: flex; 
+      align-items: center; 
+      justify-content: center; 
+      margin-right: 8px; 
+    }
+    .raio-svg { 
+      width: 18px; 
+      height: 18px; 
+      fill: #ffffff; 
+    }
+    header span { 
+      color: #00aaff; 
+    }
+    nav { 
+      display: flex; 
+      flex-wrap: wrap; 
+    }
+    nav a { 
+      color: #8fa3b1; 
+      font-weight: bold; 
+      border: 2px solid transparent; 
+      border-radius: 50px; 
+      padding: 6px 14px; 
+      text-decoration: none; 
+      transition: all 0.2s; 
+      font-size: 0.9rem; 
+      margin-left: 5px; 
+    }
+    nav a:hover, nav a.active { 
+      border-color: #00aaff; 
+      color: #00aaff; 
+    }
+
+    /* Estilo do Conteúdo da Página */
+    .sobre-container {
+      max-width: 800px;
+      margin: 40px auto 60px auto;
+      padding: 0 20px;
+    }
+    .titulo-sobre {
+      font-size: 2.2rem;
+      margin-bottom: 10px;
+    }
+    .subtitulo-sobre {
+      color: #00aaff;
+      font-size: 1.1rem;
+      margin-bottom: 30px;
+      font-weight: normal;
+    }
+    .bloco-texto {
+      background-color: #0b1522;
+      border: 1px solid #142234;
+      border-radius: 12px;
+      padding: 30px;
+      margin-bottom: 30px;
+    }
+    .bloco-texto p {
+      color: #8fa3b1;
+      font-size: 1rem;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+    .bloco-texto p:last-child {
+      margin-bottom: 0;
+    }
+    .titulo-secao {
+      font-size: 1.4rem;
+      color: #ffffff;
+      margin-bottom: 15px;
+      font-weight: bold;
+    }
+    
+    /* Container do Mapa (Iframe) */
+    .mapa-box {
+      width: 100%;
+      height: 350px;
+      border-radius: 8px;
+      overflow: hidden;
+      border: 1px solid #142234;
+      margin-top: 15px;
+    }
+    .mapa-box iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    footer { 
+      background-color: #0b1522; 
+      border-top: 1px solid #142234; 
+      padding: 40px 20px; 
+      text-align: center; 
+    }
+    .footer-logo { 
+      display: inline-flex; 
+      align-items: center; 
+      font-size: 1.3rem; 
+      font-weight: bold; 
+      text-decoration: none; 
+      color: #ffffff; 
+      margin-bottom: 10px; 
+    }
+    .footer-logo span { 
+      color: #00aaff; 
+    }
+    footer p { 
+      color: #51677a; 
+      font-size: 0.85rem; 
+      margin-bottom: 20px; 
+    }
+    .footer-nav { 
+      display: flex; 
+      justify-content: center; 
+      flex-wrap: wrap; 
+    }
+    .footer-nav a { 
+      color: #8fa3b1; 
+      text-decoration: none; 
+      font-size: 0.9rem; 
+      margin: 5px 10px; 
+    }
+    .footer-nav a:hover { 
+      color: #00aaff; 
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="container-header">
+      <a href="home.html" class="logo-link">
+        <div class="caixa-icone"><svg class="raio-svg" viewBox="0 0 24 24"><polygon points="13,2 4.5,13.5 11,13.5 11,22 19.5,10.5 13,10.5"/></svg></div>Tech<span>Zone</span>
+      </a>
+      <nav>
+        <a href="home.html">Home</a>
+        <a href="produtos.html">Produtos</a>
+        <a href="noticias.html">Notícias</a>
+        <a href="cadastro.html">Cadastro</a>
+        <a href="contato.html">Contato</a>
+        <a href="projeto.html">Projeto</a>
+        <a href="sobre.html" class="active">Sobre Nós</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="sobre-container">
+    <h1 class="titulo-sobre">Quem Somos</h1>
+    <p class="subtitulo-sobre">Conheça a história por trás da TechZone</p>
+
+    <section class="bloco-texto">
+      <h2 class="titulo-secao">Nossa História</h2>
+      <p>Fundada há pouco mais de três anos, a TechZone nasceu com o propósito claro de democratizar o acesso à tecnologia de ponta. Começámos como um pequeno projeto de entusiastas por hardware e eletrónicos e, passo a passo, fomos conquistando o nosso espaço no mercado através de um atendimento focado na transparência e na satisfação real do cliente.</p>
+      <p>Apesar de sermos uma empresa jovem e considerada iniciante face aos gigantes do setor, estes anos de caminhada trouxeram-nos a maturidade necessária para entender as dores de quem procura um produto de qualidade com um preço justo. Trabalhamos diariamente para trazer os lançamentos mais aguardados do mundo dos smartphones, consoles e áudio com a segurança que você merece.</p>
+    </section>
+
+    <section class="bloco-texto">
+      <h2 class="titulo-secao">Nossa Localização</h2>
+      <p>A nossa sede administrativa e centro de distribuição física fica localizada em <strong>Av. Paulista - SP</strong>. É daqui que enviamos tecnologia e inovação com todo o cuidado e rapidez para os quatro cantos do país.</p>
+      
+      <div class="mapa-box">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.1451016629734!2d-46.65430852377196!3d-23.563210161642232!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59c8da0aa315%3A0xd59f943179a97e7!2sAv.%20Paulista%2C%201000%20-%20Bela%20Vista%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2001310-100!5e0!3m2!1spt-BR!2sbr!4v1720468000000!5m2!1spt-BR!2sbr"
+         width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <a href="home.html" class="footer-logo">
+      <div class="caixa-icone"><svg class="raio-svg" viewBox="0 0 24 24"><polygon points="13,2 4.5,13.5 11,13.5 11,22 19.5,10.5 13,10.5"/></svg></div>Tech<span>Zone</span>
+    </a>
+    <p>Eletrônicos & Tecnologia — Qualidade que você pode confiar.</p>
+    <div class="footer-nav">
+      <a href="home.html">Home</a>
+      <a href="produtos.html">Produtos</a>
+      <a href="noticias.html">Notícias</a>
+      <a href="cadastro.html">Cadastro</a>
+      <a href="contato.html">Contato</a>
+      <a href="projeto.html">Projeto</a>
+      <a href="sobre.html">Sobre Nós</a>
+    </div><br>
+    <p>© 2026 TechZone. Trabalho acadêmico. — Breno Marchiori, Lucas ****.</p>
+  </footer>
+</body>
+</html>

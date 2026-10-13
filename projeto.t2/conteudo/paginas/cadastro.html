@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro - TechZone</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #050c14;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 30px;
+            background-color: #0b1522;
+            border-bottom: 1px solid #142234;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .caixa-icone-header { 
+            width: 40px; 
+            height: 40px; 
+            background-color: #00aaff; 
+            border-radius: 8px; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            margin-right: 10px;
+        }
+
+        .raio-svg-header { 
+            width: 24px; 
+            height: 24px; 
+            fill: #ffffff; 
+        }
+
+        .logo p {
+            color: white;
+            margin: 0;
+            font-family: sans-serif;
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+
+        span {
+            color: #00aaff;
+        }
+
+        .navegador {
+            display: flex;
+            gap: 10px;
+        }
+
+        .navegador a {
+            text-decoration: none;
+        }
+
+        .navegador p {
+            margin: 0;
+            text-transform: capitalize;
+            color: #8fa3b1;
+            font-weight: bold;
+            font-family: sans-serif;
+            padding: 8px 16px;
+            text-align: center;
+            border-radius: 20px;
+            border: 1px solid transparent;
+            transition: all 0.2s ease;
+        }
+
+        .navegador p:hover {
+            background-color: #00aaff;
+            color: white;
+            border-color: #00aaff;
+        }
+
+        main {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 50px 20px;
+        }
+
+        .fd p {
+            margin: 0;
+            background-color: transparent;
+            color: #00aaff;
+            border: 1px solid #00aaff;
+            border-radius: 25px;
+            text-align: center;
+            text-transform: uppercase;
+            font-weight: bold;
+            display: inline-block;
+            padding: 8px 20px;
+        }
+
+        h1 {
+            color: white;
+            font-size: 2.5rem;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .descricao {
+            color: #8fa3b1;
+            font-weight: bold;
+            margin-bottom: 40px;
+            max-width: 600px;
+            text-align: center;
+        }
+
+        .area-formulario {
+            background-color: #0b1522;
+            border: 1px solid #142234;
+            border-radius: 15px;
+            padding: 40px;
+            max-width: 800px;
+            width: 100%;
+        }
+
+        fieldset {
+            border: none;
+            margin-bottom: 30px;
+            padding: 0;
+        }
+
+        legend {
+            color: white;
+            font-size: 1.4rem;
+            font-weight: bold;
+            border-bottom: 1px solid #142234;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .form-label {
+            color: #8fa3b1;
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+
+        .form-control, .form-select {
+            background-color: #0d1b2a;
+            border: 1px solid #1c3144;
+            color: white;
+        }
+
+        .form-control::placeholder {
+            color: #51677a;
+        }
+
+        .form-control:focus, .form-select:focus {
+            background-color: #0d1b2a;
+            border-color: #00aaff;
+            color: white;
+            box-shadow: 0 0 0 0.25rem rgba(0, 170, 255, 0.25);
+        }
+
+        .form-check-label {
+            color: #8fa3b1;
+        }
+
+        .form-check-input {
+            background-color: #0d1b2a;
+            border: 1px solid #1c3144;
+        }
+
+        .form-check-input:checked {
+            background-color: #00aaff;
+            border-color: #00aaff;
+        }
+
+        .btn-cadastro {
+            background-color: #00aaff;
+            color: white;
+            border: 1px solid #00aaff;
+            border-radius: 25px;
+            font-weight: bolder;
+            padding: 12px 35px;
+            transition: background-color 0.2s ease;
+        }
+
+        .btn-cadastro:hover {
+            background-color: #0088cc;
+            border-color: #0088cc;
+            color: white;
+        }
+
+        .btn-limpar {
+            border-radius: 25px;
+            padding: 12px 35px;
+            font-weight: bolder;
+            transition: all 0.2s ease;
+        }
+
+        .btn-limpar:hover {
+            background-color: #142234 !important;
+            border-color: #8fa3b1 !important;
+            color: white !important;
+        }
+
+        footer {
+            flex-direction: column;
+            background-color: #0b1522;
+            border-top: 1px solid #142234;
+            display: flex;
+            width: 100%;
+            box-sizing: border-box;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 20px;
+        }
+
+        footer h1 {
+            margin: 0 0 10px 0;
+            font-size: 2rem;
+        }
+
+        footer p {
+            color: #51677a;
+            font-weight: bold;
+            font-family: sans-serif;
+            margin: 5px 0;
+        }
+
+        footer a {
+            text-decoration: none;
+            color: #51677a;
+            transition: color 0.2s ease;
+        }
+
+        footer a:hover {
+            color: #00aaff;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <div class="caixa-icone-header"><svg class="raio-svg-header" viewBox="0 0 24 24"><polygon points="13,2 4.5,13.5 11,13.5 11,22 19.5,10.5 13,10.5"/></svg></div>
+            <p>Tech<span>Zone</span></p>
+        </div>
+
+        <div class="navegador">
+            <div>
+                <a href="home.html">
+                    <p>home</p>
+                </a>
+            </div>
+
+            <div>
+                <a href="produtos.html">
+                    <p>produtos</p>
+                </a>
+            </div>
+
+            <div>
+                <a href="noticias.html">
+                    <p>notícias</p>
+                </a>
+            </div>
+
+            <div>
+                <a href="cadastro.html">
+                    <p>cadastro</p>
+                </a>
+            </div>
+
+            <div>
+                <a href="contato.html">
+                    <p>contato</p>
+                </a>
+            </div>
+
+            <div>
+                <a href="projeto.html">
+                    <p>projeto</p>
+                </a>
+            </div>
+
+            <div>
+                <a href="sobre.html">
+                    <p>sobre nós</p>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="fd">
+            <p>Formulário</p>
+        </div>
+
+        <h1>Crie sua <span>Conta</span></h1>
+
+        <p class="descricao">Preencha as informações abaixo para concluir o seu cadastro na plataforma.</p>
+
+        <div class="area-formulario">
+            <form>
+                <fieldset>
+                    <legend>Dados Pessoais</legend>
+                    
+                    <div class="mb-3">
+                        <label for="nome" class="form-label">Nome Completo *</label>
+                        <input type="text" class="form-control" id="nome" placeholder="Digite seu nome completo" required>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label for="cpf" class="form-label">CPF *</label>
+                            <input type="text" class="form-control" id="cpf" placeholder="000.000.000-00" required>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="nascimento" class="form-label">Data de Nascimento *</label>
+                            <input type="date" class="form-control" id="nascimento" required>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label for="profissao" class="form-label">Profissão</label>
+                            <input type="text" class="form-control" id="profissao" placeholder="Ex: Engenheiro, Estudante">
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="estado-civil" class="form-label">Estado Civil</label>
+                            <select class="form-select" id="estado-civil">
+                                <option value="" selected disabled hidden>Selecione...</option>
+                                <option value="solteiro">Solteiro(a)</option>
+                                <option value="casado">Casado(a)</option>
+                                <option value="divorciado">Divorciado(a)</option>
+                                <option value="viuvo">Viúvo(a)</option>
+                                <option value="uniao-estavel">União Estável</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label d-block">Sexo</label>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="sexo" id="masculino" value="masculino">
+                            <label class="form-check-label" for="masculino">Masculino</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="sexo" id="feminino" value="feminino">
+                            <label class="form-check-label" for="feminino">Feminino</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="sexo" id="outro" value="outro">
+                            <label class="form-check-label" for="outro">Outro</label>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Endereço</legend>
+
+                    <div class="mb-3">
+                        <label for="rua" class="form-label">Rua *</label>
+                        <input type="text" class="form-control" id="rua" placeholder="Nome da rua, avenida ou logradouro" required>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-8 mb-3">
+                            <label for="cidade" class="form-label">Cidade *</label>
+                            <input type="text" class="form-control" id="cidade" placeholder="Digite sua cidade" required>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <label for="estado" class="form-label">Estado *</label>
+                            <select class="form-select" id="estado" required>
+                                <option value="" selected disabled hidden>UF</option>
+                                <option value="AC">AC</option><option value="AL">AL</option><option value="AP">AP</option>
+                                <option value="AM">AM</option><option value="BA">BA</option><option value="CE">CE</option>
+                                <option value="DF">DF</option><option value="ES">ES</option><option value="GO">GO</option>
+                                <option value="MA">MA</option><option value="MT">MT</option><option value="MS">MS</option>
+                                <option value="MG">MG</option><option value="PA">PA</option><option value="PB">PB</option>
+                                <option value="PR">PR</option><option value="PE">PE</option><option value="PI">PI</option>
+                                <option value="RJ">RJ</option><option value="RN">RN</option><option value="RS">RS</option>
+                                <option value="RO">RO</option><option value="RR">RR</option><option value="SC">SC</option>
+                                <option value="SP">SP</option><option value="SE">SE</option><option value="TO">TO</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label for="cep" class="form-label">CEP *</label>
+                            <input type="text" class="form-control" id="cep" placeholder="00000-000" required>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="telefone" class="form-label">Telefone Residencial</label>
+                            <input type="text" class="form-control" id="telefone" placeholder="(00) 0000-0000">
+                        </div>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Contato</legend>
+
+                    <div class="mb-3">
+                        <label for="email" class="form-label">E-mail *</label>
+                        <input type="email" class="form-control" id="email" placeholder="seu-email@exemplo.com" required>
+                    </div>
+
+                    <div class="mb-4">
+                        <label for="observacoes" class="form-label">Observações</label>
+                        <textarea class="form-control" id="observacoes" rows="3" placeholder="Escreva aqui alguma observação importante, se necessário..."></textarea>
+                    </div>
+                </fieldset>
+
+                <div class="d-flex justify-content-center gap-3">
+                    <a href="mensagem.html" class="btn btn-cadastro">Concluir Cadastro</a>
+                    <button type="reset" class="btn btn-outline-secondary btn-limpar text-white border-secondary">Limpar</button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <h1>Tech<span>Zone</span></h1>
+        <p>Eletrônicos & Tecnologia — Qualidade que você pode confiar.</p>
+        <p><a href="home.html">HOME</a> 
+            | <a href="produtos.html">PRODUTOS</a> 
+            | <a href="noticias.html">NOTÍCIAS</a> 
+            | <a href="cadastro.html">CADASTRO</a> 
+            | <a href="projeto.html">PROJETO</a>
+            | <a href="contato.html">CONTATO</a> 
+            | <a href="sobre.html">SOBRE NÓS</a>
+        </p>
+        <p>© 2026 TechZone. Trabalho acadêmico. — Breno Marchiori, Lucas ****.</p>
+    </footer>
+
+</body>
+</html>

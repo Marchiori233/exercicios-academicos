@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto - TechZone</title>
+    <style>
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #050c14;
+            color: #ffffff;
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            background-color: #0b1523;
+            padding: 20px 40px;
+            border-bottom: 2px solid #142234;
+        }
+
+        .container-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .logo-link {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 24px;
+            font-weight: bold;
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        .logo-link span {
+            color: #00d2ff;
+        }
+
+        .caixa-icone {
+            width: 32px;
+            height: 32px;
+            background-color: #00d2ff;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .raio-svg {
+            width: 20px;
+            height: 20px;
+            fill: #050c14;
+        }
+
+        nav {
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #142234;
+        }
+
+        nav a.active {
+            background-color: #00d2ff;
+            color: #050c14;
+        }
+
+        
+        main {
+            flex: 1;
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 20px;
+            width: 100%;
+        }
+
+        h1 {
+            font-size: 32px;
+            color: #00d2ff;
+            margin-bottom: 30px;
+            text-align: center;
+            border-bottom: 2px solid #142234;
+            padding-bottom: 15px;
+        }
+
+        .secao-relatorio {
+            background-color: #0b1523;
+            padding: 30px;
+            border-radius: 8px;
+            border: 1px solid #142234;
+            margin-bottom: 25px;
+        }
+
+        h2 {
+            font-size: 20px;
+            color: #00d2ff;
+            margin-bottom: 15px;
+        }
+
+        p {
+            color: #ccd6f6;
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        ul {
+            list-style-type: disc;
+            padding-left: 20px;
+            margin-bottom: 15px;
+        }
+
+        li {
+            color: #ccd6f6;
+            margin-bottom: 10px;
+        }
+
+    
+        .equipe-secao {
+            background-color: #0b1523;
+            padding: 30px;
+            border-radius: 8px;
+            border: 1px solid #142234;
+            text-align: center;
+            margin-top: 40px;
+            margin-bottom: 20px;
+        }
+
+        .loja-nome {
+            font-size: 28px;
+            font-weight: bold;
+            color: #ffffff;
+            margin-bottom: 5px;
+        }
+
+        .loja-nome span {
+            color: #00d2ff;
+        }
+
+        .loja-tag {
+    color: #8892b0;
+    font-size: 14px;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+        .equipe-titulo {
+            font-size: 18px;
+            color: #00d2ff;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+        }
+
+        .equipe-membros {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        .membro {
+            background-color: #142234;
+            padding: 12px 24px;
+            border-radius: 6px;
+            font-weight: bold;
+            color: #ffffff;
+            min-width: 160px;
+        }
+
+        
+        footer {
+            background-color: #0b1523;
+            text-align: center;
+            padding: 35px 20px;
+            margin-top: 60px;
+            border-top: 2px solid #142234;
+        }
+
+        footer h1 {
+            font-size: 26px;
+            color: #ffffff;
+            border-bottom: none;
+            margin-bottom: 10px;
+            padding-bottom: 0;
+        }
+
+        footer h1 span {
+            color: #00d2ff;
+        }
+
+        footer p {
+            text-align: center;
+            color: #8892b0;
+            font-size: 14px;
+            margin-bottom: 12px;
+        }
+
+        footer p a {
+            color: #00d2ff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        footer p a:hover {
+            color: #ffffff;
+        }
+
+        
+        @media (max-width: 768px) {
+            header {
+                padding: 20px;
+            }
+            .container-header {
+                flex-direction: column;
+                gap: 15px;
+            }
+            nav {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 10px;
+            }
+            .secao-relatorio {
+                padding: 20px;
+            }
+            .equipe-membros {
+                flex-direction: column;
+                align-items: center;
+                gap: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+  <header>
+    <div class="container-header">
+      <a href="home.html" class="logo-link">
+        <div class="caixa-icone">
+          <svg class="raio-svg" viewBox="0 0 24 24">
+            <polygon points="13,2 4.5,13.5 11,13.5 11,22 19.5,10.5 13,10.5"/>
+          </svg>
+        </div>Tech<span>Zone</span>
+      </a>
+      <nav>
+        <a href="home.html">Home</a>
+        <a href="produtos.html">Produtos</a>
+        <a href="noticias.html">Notícias</a>
+        <a href="cadastro.html">Cadastro</a>
+        <a href="contato.html">Contato</a>
+        <a href="projeto.html" class="active">Projeto</a>
+        <a href="sobre.html">Sobre Nós</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+        <h1>Relatório de Desenvolvimento do Projeto</h1>
+
+        <div class="secao-relatorio">
+            <h2>1. Estrutura do Grupo e Adaptação</h2>
+            <p>Inicialmente, o grupo era composto por três integrantes: Breno Marchiori, Gabriel **** e Lucas ****. No entanto, devido a conflitos de horários, o integrante Gabriel **** não pôde dar continuidade à disciplina neste período. Diante disso, os integrantes Breno e Lucas redistribuíram as tarefas entre si para garantir a execução completa do projeto.</p>
+        </div>
+
+        <div class="secao-relatorio">
+            <h2>2. Planejamento e Design de Layout</h2>
+            <p>O processo de desenvolvimento iniciou-se com a etapa de design de interface (UI). Utilizamos a plataforma Figma para projetar o layout visual do site, que consiste em uma loja virtual voltada para o segmento de eletrônicos (TechZone).</p>
+            <p>Embora o objetivo inicial fosse reproduzir fielmente o protótipo do Figma, a codificação individual de cada página gerou, em um primeiro momento, divergências visuais. Foram necessários ajustes posteriores nos códigos para unificar a identidade visual. Ainda assim, persistem diferenças sutis, como os cabeçalhos e rodapés de algumas páginas.</p>
+        </div>
+
+        <div class="secao-relatorio">
+            <h2>3. Divisão do Trabalho e Cronograma</h2>
+            <p>O cronograma de desenvolvimento do site foi estruturado originalmente em três etapas principais, sendo a última fase redistribuída entre os dois integrantes restantes:</p>
+            <ul>
+                <li><strong>Parte 1 (Base do Projeto):</strong> Criação das páginas index.html, home.html</li>
+                <li><strong>Parte 2 (E-commerce):</strong> Desenvolvimento do ecossistema de produtos (produtos.html e as páginas individuais de produto1.html a produto5.html).</li>
+                <li><strong>Parte 3 (Formulários e Conteúdo):</strong> Implementação das páginas noticias.html, cadastro.html, contato.html e projeto.html.</li>
+            </ul>
+        </div>
+
+        <div class="secao-relatorio">
+            <h2>4. Expansão do Escopo e Inclusão da Página "Sobre Nós"</h2>
+            <p>Durante a revisão dos requisitos do projeto nas semanas finais, identificamos a necessidade de incluir uma página adicional de autoria própria. Optamos pela criação da página "Sobre Nós" (sobre.html), um elemento comum em e-commerces reais. Esta página foi desenvolvida para apresentar a história, a missão, a localização física (com integração ao Google Maps) e os valores institucionais da empresa fictícia do nosso trabalho.</p>
+        </div>
+
+        <div class="secao-relatorio">
+            <h2>5. Desafios de Aprendizado e Metodologia de Desenvolvimento</h2>
+            <p>O desenvolvimento exigiu pausas estratégicas ao longo do cronograma. Como alguns recursos visuais demandavam conhecimentos além do que dominávamos no momento, foi necessário pausar o código para aprofundar o estudo dos conceitos ministrados em sala de aula, especialmente no que tange às propriedades um pouco mais avançadas do CSS.</p>
+            <p>Como base teórica e técnica, utilizamos principalmente os materiais in formato de slides disponibilizados no portal do Professor.</p>
+        </div>
+
+        <div class="secao-relatorio">
+            <h2>6. Responsividade e Abordagem Tecnológica (CSS Nativo vs. Bootstrap)</h2>
+            <p>A responsividade do site apresenta variações entre as páginas. Algumas se adaptam bem a smartphones, tablets e monitores de grande porte através do uso de CSS. Em outras páginas, a adaptação para telas menores ficou mais limitada.</p>
+            <p><strong>Nota sobre o uso de Frameworks:</strong> O projeto foi construído majoritariamente em CSS puro e nativo. No entanto, o framework Bootstrap foi utilizado exclusivamente na página de cadastro (cadastro.html) para a estruturação do formulário. A integração do framework foi feita de forma direta por meio de link externo (CDN), sem a necessidade de baixar os arquivos para o projeto local. Nas demais páginas, optou-se por manter o desenvolvimento nativo, já que a estrutura principal já estava concluída quando obtivemos o domínio teórico sobre o Bootstrap em sala de aula.
+        </div>
+
+        <div class="secao-relatorio">
+            <h2>7. Processo de Homologação e Testes</h2>
+            <p>Para garantir a qualidade da interface, o processo de testes seguiu as diretrizes recomendadas nas videoaulas do Professor sobre inspeção de código. Os testes consistiram em:</p>
+            <ul>
+                <li>Utilização da ferramenta de inspeção do navegador Google Chrome, via tecla F12, para simulações.</li>
+                <li>Testes de acessibilidade e quebra de layout aplicando níveis de zoom extremos (redução para 60% e ampliação para 140%).</li>
+                <li>Navegação exaustiva para validação de fluxos e links.</li>
+            </ul>
+        </div>
+
+        <div class="secao-relatorio">
+            <h2>8. Conclusão e Considerações Finais</h2>
+            <p>O prazo de entrega mostrou-se altamente desafiador, especialmente quando somado à redução de um integrante no grupo e ao fluxo de atividades de outras disciplinas. Contudo, consideramos o resultado bastante proveitoso. Apesar de não termos atingido a fidelidade absoluta em relação ao desenho inicial do Figma, o projeto final entregou uma estrutura de HTML e CSS próxima à realidade de uma plataforma de vendas digitais profissional. Com um prazo mais extenso, teríamos margem para refinamentos ainda mais precisos na consistência visual do código.</p>
+        </div>
+
+        <div class="secao-relatorio">
+            <h2>Objetivo do Site</h2>
+            <p>O site TechZone foi desenvolvido como projeto acadêmico com o objetivo de criar uma loja virtual de eletrônicos e tecnologia, apresentando produtos de forma organizada e profissional. O projeto busca aplicar conhecimentos de HTML e CSS na construção de páginas web responsivas e atrativas.</p>
+            <p>A plataforma oferece informações detalhadas sobre produtos eletrônicos, permitindo aos usuários conhecer especificações técnicas, preços e condições de pagamento de forma clara e acessível.</p>
+        </div>
+
+        <div class="secao-relatorio">
+            <h2>Público-Alvo</h2>
+            <p>O site TechZone é destinado a:</p>
+            <ul>
+                <li>Entusiastas de tecnologia que buscam produtos eletrônicos de qualidade</li>
+                <li>Consumidores interessados em smartphones, notebooks, smartwatches e acessórios</li>
+                <li>Pessoas que valorizam informações detalhadas antes de realizar uma compra</li>
+                <li>Usuários que preferem navegar em sites com design moderno e responsivo</li>
+            </ul>
+        </div>
+
+        <section class="equipe-secao">
+            <div class="loja-nome">Tech<span>Zone</span></div>
+            <p class="loja-tag">Eletrônicos &amp; Tecnologia</p>
+            
+            <h3 class="equipe-titulo">Equipe de Desenvolvimento</h3>
+            <div class="equipe-membros">
+                <div class="membro">Breno Marchiori</div>
+                <div class="membro">Lucas ****</div>
+            </div>
+        </section>
+  </main>
+
+  <footer>
+    <h1>Tech<span>Zone</span></h1>
+    <p>Eletrônicos & Tecnologia — Qualidade que você pode confiar.</p>
+    <p>
+      <a href="home.html">HOME</a> | 
+      <a href="produtos.html">PRODUTOS</a> | 
+      <a href="noticias.html">NOTÍCIAS</a> | 
+      <a href="cadastro.html">CADASTRO</a> | 
+      <a href="contato.html">CONTATO</a> | 
+      <a href="projeto.html">PROJETO</a> | 
+      <a href="sobre.html">SOBRE NÓS</a>
+    </p>
+    <p>© 2026 TechZone. Trabalho acadêmico. — Breno Marchiori, Lucas ****.</p>
+  </footer>
+
+</body>
+</html>

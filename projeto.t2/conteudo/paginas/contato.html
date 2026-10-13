@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato - TechZone</title>
+    <style>
+        * , *::before , *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #050c14;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            font-family: Arial, Helvetica, sans-serif;
+            color: white;
+        }
+
+        header {
+            background-color: #0b1522;
+            border-bottom: 1px solid #142234;
+            padding: 20px 30px;
+        }
+
+        .container-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .logo-link {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            font-size: 1.5rem;
+            gap: 5px;
+        }
+
+        .caixa-icone {
+            width: 40px;
+            height: 40px;
+            background-color: #00aaff;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 5px;
+        }
+
+        .raio-svg {
+            width: 24px;
+            height: 24px;
+            fill: #ffffff;
+        }
+
+        span {
+            color: #00aaff;
+        }
+
+        header nav {
+            display: flex;
+            gap: 10px;
+        }
+
+        header nav a {
+            text-decoration: none;
+            text-transform: capitalize;
+            color: #8fa3b1;
+            font-weight: bold;
+            padding: 8px 16px;
+            text-align: center;
+            border-radius: 20px;
+            border: 1px solid transparent;
+            transition: all 0.2s ease;
+        }
+
+        header nav a:hover, header nav a.active {
+            background-color: #00aaff;
+            color: white;
+            border-color: #00aaff;
+        }
+
+        main {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 50px 20px;
+            gap: 30px;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .topo {
+            width: 100%;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .topo h1 {
+            color: white;
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+
+        .subtitulo {
+            color: #8fa3b1;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .contato {
+            width: 100%;
+            max-width: 650px;
+        }
+
+        .mensagem {
+            background-color: #0b1522;
+            border: 1px solid #142234;
+            padding: 40px;
+            border-radius: 15px;
+            text-align: left;
+        }
+
+        .mensagem h2 {
+            margin-bottom: 25px;
+            color: white;
+            font-size: 1.6rem;
+            border-bottom: 1px solid #142234;
+            padding-bottom: 15px;
+        }
+
+        .grupo {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            margin-bottom: 20px;
+        }
+
+        .grupo label {
+            font-weight: bold;
+            color: #8fa3b1;
+            font-size: 0.9rem;
+        }
+
+        .grupo textarea, .grupo input {
+            width: 100%;
+            padding: 12px;
+            background-color: #1c2d42;
+            border: 1px solid #142234;
+            border-radius: 8px;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+
+        .grupo textarea::placeholder, .grupo input::placeholder {
+            color: #51677a;
+        }
+
+        .grupo textarea:focus, .grupo input:focus {
+            outline: none;
+            border-color: #00aaff;
+            box-shadow: 0 0 0 3px rgba(0, 170, 255, 0.15);
+        }
+
+        .botao {
+            display: flex;
+            gap: 15px;
+            width: 100%;
+            margin-top: 25px;
+        }
+
+        .enviar {
+            width: 50%;
+            padding: 14px;
+            background-color: #00aaff;
+            color: white;
+            border: 1px solid #00aaff;
+            border-radius: 25px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .enviar:hover {
+            background-color: #0088cc;
+            border-color: #0088cc;
+        }
+
+        .limpar {
+            width: 50%;
+            padding: 14px;
+            background-color: transparent;
+            color: white;
+            border: 1px solid #142234;
+            border-radius: 25px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .limpar:hover {
+            background-color: #142234;
+            border-color: #8fa3b1;
+        }
+
+        .lateral {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .info, .atendimento {
+            width: 100%;
+        }
+
+        .mail {
+            background-color: #0b1522;
+            border: 1px solid #142234;
+            border-radius: 15px;
+            padding: 30px;
+            text-align: left;
+            line-height: 1.6;
+            color: #8fa3b1;
+        }
+
+        .mail h2 {
+            color: white;
+            margin-bottom: 20px;
+            font-size: 1.4rem;
+            border-bottom: 1px solid #142234;
+            padding-bottom: 10px;
+        }
+
+        .mail p {
+            margin-bottom: 20px;
+            border-bottom: 1px solid #142234;
+            padding-bottom: 15px;
+            color: white;
+        }
+
+        .mail p:last-child {
+            margin-bottom: 0;
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        .atendimento {
+            background-color: #0b1522;
+            border: 1px solid #142234;
+            border-radius: 15px;
+            padding: 30px;
+            text-align: left;
+        }
+
+        .atendimento h3 {
+            color: white;
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 15px;
+            border-bottom: 1px solid #142234;
+            padding-bottom: 10px;
+        }
+
+        .atendimento p {
+            color: #8fa3b1;
+            margin-bottom: 10px;
+        }
+
+        .atendimento p:last-child {
+            margin-bottom: 0;
+        }
+
+        footer {
+            flex-direction: column;
+            background-color: #0b1522;
+            border-top: 1px solid #142234;
+            display: flex;
+            width: 100%;
+            box-sizing: border-box;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 20px;
+            gap: 15px;
+            margin-top: 40px;
+        }
+
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            font-size: 2rem;
+            gap: 5px;
+        }
+
+        footer p {
+            color: #51677a;
+            font-weight: bold;
+        }
+
+        .footer-nav {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .footer-nav a {
+            text-decoration: none;
+            color: #51677a;
+            font-weight: bold;
+            transition: color 0.2s ease;
+        }
+
+        .footer-nav a:hover {
+            color: #00aaff;
+        }
+
+        @media (max-width: 768px) {
+            .container-header {
+                flex-direction: column;
+                gap: 20px;
+            }
+            header nav {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            main {
+                padding: 30px 15px;
+            }
+            .mensagem, .mail, .atendimento {
+                padding: 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container-header">
+            <a href="home.html" class="logo-link">
+                <div class="caixa-icone"><svg class="raio-svg" viewBox="0 0 24 24"><polygon points="13,2 4.5,13.5 11,13.5 11,22 19.5,10.5 13,10.5"/></svg></div>Tech<span>Zone</span>
+            </a>
+            <nav>
+                <a href="home.html">Home</a>
+                <a href="produtos.html">Produtos</a>
+                <a href="noticias.html">Notícias</a>
+                <a href="cadastro.html">Cadastro</a>
+                <a href="contato.html" class="active">Contato</a>
+                <a href="projeto.html">Projeto</a>
+                <a href="sobre.html">Sobre Nós</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="topo">
+            <h1>Fale Conosco</h1>
+            <p class="subtitulo">Tem alguma dúvida ou sugestão? Entre em contato conosco!</p>
+            <p class="subtitulo">Estamos prontos para atendê-lo e responderemos o mais breve possível.</p>
+        </div>
+
+        <section class="contato">
+            <form action="GET" class="mensagem">
+                <h2>Envie sua mensagem</h2>
+
+                <div class="grupo">
+                    <label for="email">Seu e-mail</label>
+                    <input type="email" name="email" id="email" required placeholder="exemplo@email.com">  
+                </div>
+
+                <div class="grupo">
+                    <label for="assunto">Assunto</label>
+                    <input type="text" name="assunto" id="assunto" required placeholder="Digite o assunto da mensagem">
+                </div>
+
+                <div class="grupo">
+                    <label for="mensagem">Mensagem</label>
+                    <textarea name="mensagem" id="mensagem" rows="5" placeholder="Digite sua mensagem"></textarea>
+                </div>
+
+                <div class="botao">
+                    <button type="submit" class="enviar">Enviar mensagem</button>
+                    <button type="reset" class="limpar">Limpar</button>
+                </div>
+            </form>
+        </section>
+
+        <div class="lateral">
+            <section class="info">
+                <div class="mail">
+                    <h2>Informação de contato</h2>
+                    <strong>📧 E-MAIL</strong><br>
+                    <span>contato@techzone.com.br</span>
+                    <p></p>
+                    <strong>📱 TELEFONE</strong>
+                    <p>
+                        (11) 3000-0000<br>
+                        (11) 98765-4321
+                    </p>
+                    <strong>📍 ENDEREÇO</strong>
+                    <p>
+                        Av. Paulista, 1000 - Sala 500<br>
+                        Bela Vista, São Paulo - SP<br>
+                        CEP: 01310-100
+                    </p>
+                </div>
+            </section>
+
+            <section class="atendimento">
+                <h3>HORÁRIO DE ATENDIMENTO</h3>
+                <p><strong>Segunda a Sexta:</strong> 9h às 18h</p>
+                <p><strong>Sábado:</strong> 9h às 13h</p>
+                <p><strong>Domingo e Feriados:</strong> Fechado</p>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <a href="home.html" class="footer-logo">
+            <div class="caixa-icone"><svg class="raio-svg" viewBox="0 0 24 24"><polygon points="13,2 4.5,13.5 11,13.5 11,22 19.5,10.5 13,10.5"/></svg></div>Tech<span>Zone</span>
+        </a>
+        <p>Eletrônicos & Tecnologia — Qualidade que você pode confiar.</p>
+        <div class="footer-nav">
+            <a href="home.html">Home</a>
+            <a href="produtos.html">Produtos</a>
+            <a href="noticias.html">Notícias</a>
+            <a href="cadastro.html">Cadastro</a>
+            <a href="contato.html">Contato</a>
+            <a href="projeto.html">Projeto</a>
+            <a href="sobre.html">Sobre Nós</a>
+        </div>
+        <p>© 2026 TechZone. Trabalho acadêmico. — Breno Marchiori, Lucas ****.</p>
+    </footer>
+
+</body>
+</html>

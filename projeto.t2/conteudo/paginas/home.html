@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechZone</title>
+    <style>body{
+    background-color: #050c14; 
+    min-height: 100vh;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    background-color: #0b1522;
+    border-bottom: 1px solid #142234;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+}
+
+.logo img{
+    width: 60px;
+    height: 50px;
+    object-fit: contain;
+}
+
+.logo p{
+    color: white;
+    margin: 0;
+    margin-left: 5px;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+span{
+    color: #00aaff; 
+}
+
+.navegador{
+    display: flex;
+    gap: 15px;
+}
+
+.navegador p{
+    margin: 0;
+    text-transform: capitalize;
+    color: #8fa3b1;
+    font-weight: bold;
+    font-family: sans-serif;
+    padding: 8px 16px;
+    text-align: center;
+    border-radius: 20px;
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.navegador p:hover{
+    background-color:#00aaff;
+    color: white;
+    border-color: #00aaff;
+}
+
+main{
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #050c14; 
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.conteudoprincipal{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+}
+
+.bv > p{
+    margin: 0;
+    background-color: transparent;
+    color: #00aaff;
+    border: 1px solid #00aaff;
+    border-radius: 25px;
+    text-align: center;
+    width: auto;
+    box-sizing: border-box;
+    align-items: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    display: inline-block;
+    padding: 8px 20px;
+}
+
+h1{
+    color: white;
+    font-size: 2.5rem;
+    margin-top: 20px;
+}
+
+.descricao{
+    color: #8fa3b1;
+    font-weight: bold;
+    margin-bottom: 50px;
+    max-width: 600px; 
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 20px;
+}
+
+.prod {
+    display: inline-block;
+    text-decoration: none;
+    background-color: #00aaff;
+    color: white;
+    border: 1px solid #00aaff;
+    border-radius: 25px;
+    font-weight: bolder;
+    font-family: sans-serif;
+    padding: 12px 35px;
+    transition: background-color 0.2s ease;
+}
+
+.prod:hover {
+    background-color: #0088cc;
+}
+
+.sobre{
+    padding-top: 60px;
+    padding-bottom: 60px;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    background-color: #0b1522; 
+    border-top: 1px solid #142234;
+    border-bottom: 1px solid #142234;
+}
+
+.sobre h2{
+    color: white;
+    font-size: 2rem;
+}
+
+.sobre p{
+    padding-top: 10px;
+    color: #8fa3b1;
+    font-family: sans-serif;
+    font-weight: bold;
+    max-width: 700px; 
+    margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    line-height: 1.6;
+}
+
+.sobre > p >span{
+    color: white;
+}
+
+.produtos{
+    color: white;
+    padding: 60px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    width: 100%;
+    box-sizing: border-box;
+    flex-direction: column;
+    align-items: center;
+}
+
+.produtos secao{
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.produtos secao h2{
+    color: white;
+    font-size: 2rem;
+    margin-bottom: 5px;    
+}
+
+.produtos secao p{
+    color: #8fa3b1;
+    margin: 0;
+}
+
+.produtos img{
+    width: 100%;
+    height: 200px;
+    object-fit: contain; 
+    background-color: transparent;
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+
+.caixas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start; 
+    max-width: 1530px;
+    gap: 25px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+
+.celular, .console, .tv, .audio, .we {
+    border: 1px solid #142234;
+    background-color: #0b1522;
+    border-radius: 15px;
+    width: 280px;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+    transition: transform 0.2s ease;
+}
+
+.celular:hover, .console:hover, .tv:hover, .audio:hover, .we:hover {
+    transform: translateY(-5px);
+    border-color: #00aaff;
+}
+
+.celular img, .console img, .tv img, .audio img, .we img {
+    width: 100%;
+    height: 180px;
+    object-fit: contain;
+    background-color: transparent;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.caixas p {
+    margin: 0;
+    color: #8fa3b1;
+    font-weight: lighter;
+}
+
+.caixas b{
+    margin-top: 15px;
+    color: #00aaff;
+    margin-bottom: 15px;
+    font-size: large;
+}
+
+.caixas h1{
+    color: #00aaff;
+    font-weight: lighter;
+    margin: 10px 0;
+}
+
+.secao p{
+    color: #8fa3b1;
+}
+
+.escolha{
+    flex-direction: column;
+    background-color: #050c14;
+    display: flex;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.escolha h2{
+    color: white;
+    font-size: 2rem;
+}
+
+.escolha p{
+    color: #8fa3b1;
+}
+
+.opcoes{
+    color: white;
+    padding: 40px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    width: 100%;
+    box-sizing: border-box;
+    flex-direction: row; 
+    align-items: center;
+}
+
+.opcoes span{
+    text-transform: uppercase;
+}
+
+
+.frete, .compra, .troca, .original {
+    border: 1px solid #142234;
+    background-color: #0b1522;
+    border-radius: 15px;
+    width: 250px;
+    min-height: 150px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.escolha hr{
+    width: 80%;
+    max-width: 1000px;
+    border: 0;
+    border-top: 1px solid #142234;
+    margin-top: 40px;
+}
+
+footer{
+    flex-direction: column;
+    background-color: #0b1522;
+    border-top: 1px solid #142234;
+    display: flex;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+footer p{
+    color: #51677a;
+    font-weight: bold;
+    font-family: sans-serif;
+    margin: 5px 0;
+}
+
+footer a {
+    text-decoration: none;
+    color: #51677a;
+    transition: color 0.2s ease;
+}
+
+footer a:hover {
+    color: #00aaff;
+}
+
+.caixa-icone-header { 
+    width: 40px; 
+    height: 40px; 
+    background-color: #00aaff; 
+    border-radius: 8px; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    margin-right: 10px;
+}
+
+.raio-svg-header { 
+    width: 24px; 
+    height: 24px; 
+    fill: #ffffff; 
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    background-color: #0b1522; 
+    border-bottom: 1px solid #142234;
+}
+
+.navegador {
+    display: flex;
+    gap: 10px;
+}
+
+.navegador a {
+    text-decoration: none; 
+}
+
+.navegador p {
+    margin: 0;
+    text-transform: capitalize;
+    color: #8fa3b1; 
+    font-weight: bold;
+    font-family: sans-serif;
+    padding: 8px 16px;
+    text-align: center;
+    border-radius: 20px;
+    border: 1px solid transparent;
+    transition: all 0.2s ease;
+}
+
+.navegador p:hover {
+    background-color: #00aaff; 
+    color: white;
+    border-color: #00aaff;
+}
+</style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <div class="caixa-icone-header"><svg class="raio-svg-header" viewBox="0 0 24 24"><polygon points="13,2 4.5,13.5 11,13.5 11,22 19.5,10.5 13,10.5"/></svg></div>
+            <p>Tech<span>Zone</span></p>
+        </div>
+
+        <div class="navegador">
+            <div>
+                <a href="home.html">
+                    <p>home</p>
+                </a>
+            </div>
+
+            <div>
+                <a href="produtos.html">
+                    <p>produtos</p>
+                </a>
+            </div>
+
+            <div>
+                <a href="noticias.html">
+                    <p>notícias</p>
+                </a>
+            </div>
+
+            <div>
+                <a href="cadastro.html">
+                    <p>cadastro</p>
+                </a>
+            </div>
+
+            <div>
+                <a href="contato.html">
+                    <p>contato</p>
+                </a>
+            </div>
+
+            <div>
+                <a href="projeto.html">
+                    <p>projeto</p>
+                </a>
+            </div>
+
+            <div>
+                <a href="sobre.html">
+                    <p>Sobre Nós</p>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="conteudoprincipal">
+            <div class="bv">
+                <p>bem-vindo à techzone</p>
+            </div>
+
+            <h1>Tecnologia de ponta ao seu <span>alcance</span></h1>
+
+            <p class="descricao">Os melhores proodutos eletrônicos com qualidade garantida,suporte especializado e os melhores preços de mercado.</p>
+
+            <div>
+                <a href="produtos.html" class="prod">Ver Produtos</a>
+            </div>
+        </div>
+
+        <p></p>
+
+        <section class="sobre">
+            <h2>Sobre a Loja</h2>
+            <p>Quem somos</p>
+            <p>A <span>TechZone</span> nasceu da paixão por tecnologia e da vontade de oferecer o melhor em eletrônicos com atendimento de qualidade. Trabalhamos com as marcas mais reconhecidas do mercado Apple, Sony, Samsung e muito mais garantindo produtos originais, com nota fiscal e suporte pós-venda. Nossa missão é conectar pessoas à tecnologia que transforma o dia a dia.</p>
+        </section>
+        
+        <section class="produtos">
+            <div class="secao">
+                <h2>Produtos em Destaque</h2>
+                <p>Seleção especial dos mais procurados</p>
+            </div>
+
+            <div class="caixas">
+                <div class="celular">
+                    <img src="../imagens/iPhone-16-Pro-Max-Latest-Apple-Smartphone.png" alt="">
+                    <span>SMARTPHONE</span>
+                    <h2>Apple iphone 15</h2>
+                    <p>Chip A16 Bionic, câmera dupla de 48MP, Dynamic Island e conector USB-C. 128GB.</p>
+                    <b>R$4.899,00</b>
+                    <div>
+                        <a href="produtos.html" class="prod">Ver produtos</a>
+                    </div>
+                </div>
+                <div class="console">
+                    <img src="../imagens/pngaaa.com-3365454.png" alt="">
+                    <span>CONSOLES & GAMES</span>
+                    <h2>Sony PlayStation 5</h2>
+                    <p>SSD ultrarrápido, gráficos 4K a 120fps, ray tracing e controle DualSense com feedback háptico.</p>
+                    <b>R$3.999,00</b>
+                    <div>
+                        <a href="produtos.html" class="prod">Ver Produtos</a>
+                    </div>
+                </div>
+                <div class="tv">
+                    <img src="../imagens/pngwing.com.png" alt="">
+                    <span>TELEVISORES</span>
+                    <h2>Smart TV 4K 55"</h2>
+                    <p>Resolução Ultra HD 4K, sistema Android TV, HDR10+ e Wi-Fi integrado. Bordas ultrafinas.</p>
+                    <b>R$2.499,00</b>
+                    <div>
+                        <a href="produtos.html" class="prod">Ver Produtos</a>
+                    </div>
+                </div>
+                <div class="audio">
+                    <img src="../imagens/—Pngtree—sony headphones on transparent generated_14964793.png" alt="">
+                    <span>audio</span>
+                    <h2>Sony WH-1000XM5</h2>
+                    <p>Cancelamento de ruído líder de mercado, 30h de bateria e conexão multipoint simultânea.</p>
+                    <b>R$1.799,00</b>
+                    <div>
+                        <a href="produtos.html" class="prod">Ver Produtos</a>
+                    </div>
+                </div>
+                <div class="we">
+                    <img src="../imagens/—Pngtree—black apple watch with elegant_17410709.png" alt="">
+                    <span>wearlebles</span>
+                    <h2>Apple Watch Series 10</h2>
+                    <p>Tela OLED always-on, monitoramento cardíaco avançado, GPS e resistência à água 50m.</p>
+                    <b>R$3.499,00</b>
+                    <div>
+                        <a href="produtos.html" class="prod">Ver Produtos</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="escolha">
+            <h2>Porque escolher a TechZone?</h2>
+            <p>Vantagens exclusivas para nossos clientes</p>
+            <div class="opcoes">
+                <div class="frete">
+                    <br>
+                    🚚<br>
+                    <span>frete gratis</span>
+                    <p>Entrega gratuita para todo o Brasil em compras acima de R$ 299,00.</p>
+                </div>
+                <div class="compra">
+                    <br>
+                    🔒<br>
+                    <span>compra segura</span>
+                    <p>Site protegido com criptografia SSL e pagamento 100% seguro.</p>
+                </div>
+                <div class="troca">
+                    <br>
+                    ↩️<br>
+                    <span>troca facil</span>
+                    <p>Até 30 dias para trocar ou devolver seu produto sem burocracia.</p>
+                </div>
+                <div class="original">
+                    <br>
+                    🏅<br>
+                    <span>produto original</span>
+                    <p>Todos os produtos são originais, com nota fiscal e garantia de fábrica.</p>
+                </div>
+            </div>
+        
+        </section>
+    </main>
+
+    <footer>
+        <h1>Tech<span>Zone</span></h1>
+        <p>Eletrônicos & Tecnologia — Qualidade que você pode confiar.</p>
+        <p><a href="home.html">HOME</a> |<a href="produtos.html"> PRODUTOS</a> | <a href="noticias.html">NOTÍCIAS</a> | <a href="cadastro.html">CADASTRO</a> | <a href="contato.html">CONTATO</a>  | <a href="projeto.html">PROJETO</a> | <a href="sobre.html">Sobre Nós</a></p>
+        <p>© 2026 TechZone. Trabalho acadêmico. — Breno Marchiori, Lucas ****.</p>
+    </footer>
+
+</body>
+</html>

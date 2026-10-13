@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TechZone — PlayStation 5</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      background-color: #050c14;
+      color: #ffffff;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    
+    header {
+      background-color: #0b1522;
+      border-bottom: 1px solid #142234;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .container-header {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo-link {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      color: #ffffff;
+      font-size: 1.4rem;
+      font-weight: bold;
+    }
+    .caixa-icone {
+      width: 32px;
+      height: 32px;
+      background-color: #00aaff;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 8px;
+    }
+    .raio-svg {
+      width: 18px;
+      height: 18px;
+      fill: #ffffff;
+    }
+    header span {
+      color: #00aaff;
+    }
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    nav a {
+      color: #8fa3b1;
+      font-weight: bold;
+      border: 2px solid transparent;
+      border-radius: 50px;
+      padding: 6px 14px;
+      text-decoration: none;
+      transition: all 0.2s;
+      font-size: 0.9rem;
+      margin-left: 5px;
+    }
+    nav a:hover {
+      border-color: #00aaff;
+      color: #00aaff;
+    }
+    nav a.active {
+      border-color: #00aaff;
+      color: #00aaff;
+    }
+
+    .main-container {
+      max-width: 1200px;
+      margin: 40px auto 20px auto;
+      padding: 0 20px;
+      display: flex;
+      justify-content: space-between;
+    }
+    .coluna-esquerda {
+      width: 48%;
+    }
+    .coluna-direita {
+      width: 48%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .card-galeria {
+      background-color: #0b1522;
+      border: 1px solid #142234;
+      border-radius: 12px;
+      padding: 30px;
+      text-align: center;
+      display: block;
+    }
+    .img-principal {
+      max-width: 70%;
+      height: 500px;
+      border-radius: 4px;
+    }
+    .miniaturas {
+      display: flex;
+      margin-top: 20px;
+      justify-content: space-between;
+    }
+    .mini-card {
+      width: 31%;
+      background-color: #0b1522;
+      border: 1px solid #142234;
+      border-radius: 8px;
+      padding: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 70px;
+      text-decoration: none;
+    }
+    .mini-card img {
+      max-height: 100%;
+      max-width: 100%;
+    }
+
+    .tag-categoria {
+      color: #00aaff;
+      font-weight: bold;
+      text-transform: uppercase;
+      font-size: 0.75rem;
+      margin-bottom: 5px;
+    }
+    .produto-titulo {
+      font-size: 2.3rem;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+    .descricao {
+      color: #8fa3b1;
+      font-size: 1.0rem;
+      line-height: 1.6;
+      margin-bottom: 30px;
+    }
+    .preco-destaque {
+      font-size: 2rem;
+      font-weight: bold;
+      color: #00aaff;
+      margin-bottom: 30px;
+    }
+    
+    .botoes-grupo {
+      display: flex;
+      flex-direction: column;
+    }
+    .btn-card-custom {
+      width: 100%;
+      padding: 14px;
+      font-size: 1rem;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: all 0.2s;
+      text-align: center;
+      margin-bottom: 15px;
+    }
+    .btn-comprar {
+      background-color: #00aaff;
+      color: #ffffff;
+      border: 2px solid #00aaff;
+    }
+    .btn-comprar:hover {
+      background-color: #33bfff;
+      box-shadow: 0 0 12px rgba(0, 170, 255, 0.4);
+    }
+    .btn-carrinho {
+      background-color: #0d1b2a;
+      color: #00aaff;
+      border: 2px solid #00aaff;
+    }
+    .btn-carrinho:hover {
+      background-color: #12283f;
+      box-shadow: 0 0 12px rgba(0, 170, 255, 0.4);
+    }
+
+    .secao-especificacoes {
+      max-width: 1200px;
+      margin: 60px auto 40px auto;
+      padding: 0 20px;
+    }
+    .secao-especificacoes h2 {
+      font-size: 1.6rem;
+      font-weight: bold;
+      margin-bottom: 30px;
+    }
+    .tabela-specs {
+      width: 100%;
+      border-collapse: collapse;
+      background-color: #0b1522;
+      border: 1px solid #142234;
+      border-radius: 8px;
+    }
+    .tabela-specs td {
+      padding: 18px 25px;
+      border-bottom: 1px solid #142234;
+      font-size: 0.95rem;
+    }
+    .tabela-specs tr:last-child td {
+      border-bottom: none;
+    }
+    .spec-nome {
+      width: 30%;
+      color: #8fa3b1;
+      font-weight: bold;
+    }
+    .spec-valor {
+      color: #ffffff;
+    }
+
+    footer {
+      background-color: #0b1522;
+      border-top: 1px solid #142234;
+      padding: 40px 20px;
+      text-align: center;
+      margin-top: 60px;
+    }
+    .footer-logo {
+      display: inline-flex;
+      align-items: center;
+      font-size: 1.3rem;
+      font-weight: bold;
+      text-decoration: none;
+      color: #ffffff;
+      margin-bottom: 10px;
+    }
+    .footer-logo span {
+      color: #00aaff;
+    }
+    footer p {
+      color: #51677a;
+      font-size: 0.85rem;
+      margin-bottom: 20px;
+    }
+    .footer-nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .footer-nav a {
+      color: #8fa3b1;
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: color 0.2s;
+      margin: 5px 10px;
+    }
+    .footer-nav a:hover {
+      color: #00aaff;
+    }
+
+    @media (max-width: 768px) {
+      .container-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+      }
+      nav {
+        justify-content: center;
+        gap: 8px;
+      }
+      nav a {
+        margin: 2px;
+      }
+      .main-container {
+        flex-direction: column;
+      }
+      .coluna-esquerda {
+        width: 100%;
+        margin-bottom: 30px;
+      }
+      .coluna-direita {
+        width: 100%;
+      }
+      .mini-card {
+        width: 31%;
+      }
+      .tabela-specs td {
+        display: block;
+        width: 100%;
+      }
+      .spec-nome {
+        padding-bottom: 5px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container-header">
+      <a href="home.html" class="logo-link">
+        <div class="caixa-icone">
+          <svg class="raio-svg" viewBox="0 0 24 24">
+            <polygon points="13,2 4.5,13.5 11,13.5 11,22 19.5,10.5 13,10.5"/>
+          </svg>
+        </div>Tech<span>Zone</span>
+      </a>
+      <nav>
+        <a href="home.html">Home</a>
+        <a href="produtos.html" class="active">Produtos</a>
+        <a href="noticias.html">Notícias</a>
+        <a href="cadastro.html">Cadastro</a>
+        <a href="contato.html">Contato</a>
+        <a href="projeto.html">Projeto</a>
+        <a href="sobre.html">Sobre Nós</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main-container">
+    <div class="coluna-esquerda">
+      <a href="../images.jpg/ps5-1-.jpg" target="_blank" class="card-galeria">
+        <img src="../images.jpg/ps5-1-.jpg" alt="PlayStation 5" class="img-principal">
+      </a>
+      <div class="miniaturas">
+        <a href="../images.jpg/ps5-2.jpg" target="_blank" class="mini-card">
+          <img src="../images.jpg/ps5-2.jpg" alt="Miniatura 1">
+        </a>
+        <a href="../images.jpg/ps5-3.jpg" target="_blank" class="mini-card">
+          <img src="../images.jpg/ps5-3.jpg" alt="Miniatura 2">
+        </a>
+        <a href="../images.jpg/ps5-4.jpg" target="_blank" class="mini-card">
+          <img src="../images.jpg/ps5-4.jpg" alt="Miniatura 3">
+        </a>
+      </div>
+    </div>
+
+    <div class="coluna-direita">
+      <span class="tag-categoria">Consoles</span>
+      <h1 class="produto-titulo">PlayStation 5</h1>
+      <p class="descricao">
+        Experimente o carregamento do sistema na velocidade da luz com um SSD de ultra-alta velocidade. Conta com suporte completo a gráficos impressionantes inabaláveis em 4K até 120fps, gatilhos adaptáveis e tecnologia de áudio 3D imersiva.
+      </p>
+      <span class="preco-parcelado">12x de R$ 333,25 sem juros ou</span>
+      <p class="preco-destaque">R$ 3.999,00</p>
+      <div class="botoes-grupo">
+        <a href="#" class="btn-card-custom btn-comprar">Comprar Agora</a>
+        <a href="#" class="btn-card-custom btn-carrinho">Adicionar ao Carrinho</a>
+      </div>
+    </div>
+  </main>
+
+  <section class="secao-especificacoes">
+    <h2>Especificações Técnicas</h2>
+    <table class="tabela-specs">
+      <tr>
+        <td class="spec-nome">Processador (CPU)</td>
+        <td class="spec-valor">AMD Zen 2 personalizado com 8 núcleos a 3,5 GHz</td>
+      </tr>
+      <tr>
+        <td class="spec-nome">Processador (GPU)</td>
+        <td class="spec-valor">AMD RDNA 2 — 10,28 teraflops, 36 CUs a 2,23 GHz</td>
+      </tr>
+      <tr>
+        <td class="spec-nome">Memória RAM</td>
+        <td class="spec-valor">16GB GDDR6 com barramento de 256 bits</td>
+      </tr>
+      <tr>
+        <td class="spec-nome">Armazenamento</td>
+        <td class="spec-valor">SSD NVMe 825GB (expansível via slot M.2)</td>
+      </tr>
+      <tr>
+        <td class="spec-nome">Velocidade do SSD</td>
+        <td class="spec-valor">Leitura bruta: 5,5 GB/s (comprimido: até 9 GB/s)</td>
+      </tr>
+      <tr>
+        <td class="spec-nome">Resolução suportada</td>
+        <td class="spec-valor">720p, 1080i, 1080p, 4K — até 120fps</td>
+      </tr>
+      <tr>
+        <td class="spec-nome">Áudio</td>
+        <td class="spec-valor">Motor Tempest 3D — suporte a fones e TV compatíveis</td>
+      </tr>
+      <tr>
+        <td class="spec-nome">Mídia</td>
+        <td class="spec-valor">Ultra HD Blu-ray 100GB, Blu-ray, DVD</td>
+      </tr>
+      <tr>
+        <td class="spec-nome">Conectividade</td>
+        <td class="spec-valor">Wi-Fi 6 (802.11ax), Bluetooth 5.1, USB-A, USB-C</td>
+      </tr>
+      <tr>
+        <td class="spec-nome">Saída de vídeo</td>
+        <td class="spec-valor">HDMI 2.1 — 4K 120fps, 8K, VRR</td>
+      </tr>
+      <tr>
+        <td class="spec-nome">Dimensões</td>
+        <td class="spec-valor">390 x 104 x 260 mm — 4,5 kg</td>
+      </tr>
+    </table>
+  </section>
+
+  <footer>
+    <a href="home.html" class="footer-logo">
+      <div class="caixa-icone">
+        <svg class="raio-svg" viewBox="0 0 24 24">
+          <polygon points="13,2 4.5,13.5 11,13.5 11,22 19.5,10.5 13,10.5"/>
+        </svg>
+      </div>Tech<span>Zone</span>
+    </a>
+    <p>Eletrônicos & Tecnologia — Qualidade que você pode confiar.</p>
+    <div class="footer-nav">
+      <a href="home.html">Home</a>
+      <a href="produtos.html">Produtos</a>
+      <a href="noticias.html">Notícias</a>
+      <a href="cadastro.html">Cadastro</a>
+      <a href="contato.html">Contato</a>
+      <a href="projeto.html">Projeto</a>
+      <a href="sobre.html">Sobre Nós</a>
+    </div>
+     <br><p>© 2026 TechZone. Trabalho acadêmico. — Breno Marchiori, Lucas ****.</p>
+  </footer>
+
+</body>
+</html>
