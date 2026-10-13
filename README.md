@@ -1,4 +1,4 @@
-# 🛒 E-commerce de Eletrónicos (Trabalho Prático - FDW)
+# 🛒 E-commerce de Eletrónicos (Trabalho Prático)
 
 Este repositório contém o trabalho prático final (T2) desenvolvido para a universidade. Trata-se de uma simulação de uma loja virtual (*e-commerce*) dedicada à venda de produtos eletrónicos e tecnologia.
 
