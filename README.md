@@ -37,6 +37,6 @@ projeto.t2/
 │   ├── contato.html        # Formulário e dados de contacto
 │   ├── mensagem.html       # Confirmação de envio de mensagem
 │   ├── noticias.html       # Secção de novidades
-│   ├── sobre.html          # Informações sobre a loja/equipa
+│   ├── sobre.html          # Informações sobre a loja/equipe
 │   └── projeto.html        # Página de apresentação do projeto
 └── README.md               # Documentação do repositório
