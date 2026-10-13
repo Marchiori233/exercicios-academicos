@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cursos de Informática</title>
+  <link href="../bootstrap/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../bootstrap/rapbootstrap.min.js">
+</head>
+<body>
+
+<div class="container my-4">
+
+  <div class="p-5 mb-5 bg-light rounded-3 text-center">
+    <div class="container-fluid py-3">
+      <h1 class="display-5 fw-bold text-primary">Domine a Tecnologia</h1>
+      <p class="col-md-10 mx-auto fs-5 text-muted">
+        Invista no seu futuro com os nossos cursos avançados de capacitação em informática. Aprenda ferramentas essenciais, conquiste novas habilidades e destaque-se no mercado de trabalho.
+      </p>
+    </div>
+  </div>
+
+  <hr class="my-5">
+
+  <h2 class="mb-4">Nossos Cursos</h2>
+  <div class="row mb-5">
+    <div class="col-4">
+      <div id="menu-cursos" class="list-group sticky-top" style="top: 20px;">
+        <a class="list-group-item list-group-item-action active" href="#curso-python">Python & Lógica</a>
+        <a class="list-group-item list-group-item-action" href="#curso-sql">Banco de Dados SQL</a>
+        <a class="list-group-item list-group-item-action" href="#curso-powerbi">Análise com Power BI</a>
+        <a class="list-group-item list-group-item-action" href="#curso-redes">Infraestrutura & Cloud</a>
+      </div>
+    </div>
+    
+    <div class="col-8">
+      <div data-bs-spy="scroll" data-bs-target="#menu-cursos" data-bs-smooth-scroll="true" class="p-3 bg-white border rounded" tabindex="0" style="height: 350px; overflow-y: scroll;">
+        
+        <div id="curso-python" class="mb-5">
+          <h4>Lógica de Programação e Python</h4>
+          <p>O ponto de partida ideal para o mundo do desenvolvimento. Aprenda a pensar como um programador, entenda estruturas de dados e desenvolva scripts para automatizar tarefas cotidianas e analisar dados de forma inteligente.</p>
+        </div>
+        
+        <div id="curso-sql" class="mb-5">
+          <h4>Banco de Dados e SQL</h4>
+          <p>Aprenda a linguagem universal das empresas para lidar com dados. Neste curso, você vai dominar a criação de bancos de dados, modelagem de tabelas e a escrita de consultas complexas (SELECTs) para extrair relatórios cruciais.</p>
+        </div>
+        
+        <div id="curso-powerbi" class="mb-5">
+          <h4>Análise de Dados com Power BI</h4>
+          <p>Transforme dados brutos em decisões estratégicas. Aprenda a conectar diferentes fontes de informação, tratar os dados e construir painéis (dashboards) visuais, interativos e altamente profissionais para o mercado corporativo.</p>
+        </div>
+        
+        <div id="curso-redes" class="mb-5">
+          <h4>Infraestrutura de Redes e Cloud</h4>
+          <p>Compreenda como a informação viaja. O curso aborda desde a configuração de redes locais, roteadores e segurança básica, até uma introdução prática aos principais serviços de nuvem do mercado, como AWS e Azure.</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <hr class="my-5">
+
+  <h2 class="mb-4">Turmas Disponíveis</h2>
+  <div class="accordion" id="acordeonTurmas">
+    
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="painel-python">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#turma-python" aria-expanded="false" aria-controls="turma-python">
+          Turmas - Lógica de Programação e Python
+        </button>
+      </h2>
+      <div id="turma-python" class="accordion-collapse collapse" aria-labelledby="painel-python" data-bs-parent="#acordeonTurmas">
+        <div class="accordion-body">
+          <p><strong>Turma Noturna:</strong> Início em 10/08 | Previsão de término em 14/10</p>
+          <p><strong>Turma de Sábado:</strong> Início em 15/08 | Previsão de término em 28/11</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="painel-sql">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#turma-sql" aria-expanded="false" aria-controls="turma-sql">
+          Turmas - Banco de Dados e SQL
+        </button>
+      </h2>
+      <div id="turma-sql" class="accordion-collapse collapse" aria-labelledby="painel-sql" data-bs-parent="#acordeonTurmas">
+        <div class="accordion-body">
+          <p><strong>Turma Matutina:</strong> Início em 17/08 | Previsão de término em 25/09</p>
+          <p><strong>Turma Noturna:</strong> Início em 19/08 | Previsão de término em 30/10</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="painel-powerbi">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#turma-powerbi" aria-expanded="false" aria-controls="turma-powerbi">
+          Turmas - Análise de Dados com Power BI
+        </button>
+      </h2>
+      <div id="turma-powerbi" class="accordion-collapse collapse" aria-labelledby="painel-powerbi" data-bs-parent="#acordeonTurmas">
+        <div class="accordion-body">
+          <p><strong>Turma Noturna:</strong> Início em 01/09 | Previsão de término em 05/11</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="painel-redes">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#turma-redes" aria-expanded="false" aria-controls="turma-redes">
+          Turmas - Infraestrutura de Redes e Cloud
+        </button>
+      </h2>
+      <div id="turma-redes" class="accordion-collapse collapse" aria-labelledby="painel-redes" data-bs-parent="#acordeonTurmas">
+        <div class="accordion-body">
+          <p><strong>Turma de Sábado:</strong> Início em 05/09 | Previsão de término em 19/12</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+<script src="../bootstrap/bootstrap.min.js"></script>
+
+</body>
+</html>
