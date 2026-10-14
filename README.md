@@ -12,6 +12,8 @@ O projeto é composto por duas páginas estáticas principais:
 
 - **HTML5**: Estruturação dos elementos e das páginas do formulário.
 
+- <img width="591" height="950" alt="Captura de tela de 2026-10-13 17-13-37" src="https://github.com/user-attachments/assets/6a094cfb-1521-446f-b225-38ebcec41e47" />
+
 ## 📂 Estrutura de Arquivos
 
 ```text
