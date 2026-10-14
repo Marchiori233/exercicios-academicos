@@ -13,8 +13,7 @@ O exercício explora a aplicação visual de elementos estruturais e caixas em u
 
 ## 📸 Pré-visualização
 
-file:///home/breno/Imagens/Capturas%20de%20tela/Captura%20de%20tela%20de%202026-10-14%2014-51-43.png
-
+<img width="900" height="718" alt="Captura de tela de 2026-10-14 14-51-43" src="https://github.com/user-attachments/assets/ecf50f12-923f-4f13-8d73-ae818fec7f5c" />
 
 
 ## 🛠️ Tecnologias Utilizadas
