@@ -25,6 +25,6 @@ O exercício explora a aplicação visual de elementos estruturais e caixas em u
 
 ```text
 exercicio-css-04/
-├── index.html        # Página principal com o conteúdo
+├── index_box.html        # Página principal com o conteúdo
 ├── estilo_box.css    # Folha de estilos com regras do Box Model
 └── README.md         # Documentação do projeto
