@@ -7,12 +7,18 @@ Este repositório contém uma atividade prática desenvolvida para a faculdade, 
 O projeto é composto por duas páginas estáticas principais:
 1. **`pagina04.html`:** Contém o formulário com os campos de entrada (*inputs*) para o usuário preencher.
 2. **`DadosContato.html`:** Página de destino que exibe os dados recebidos após o envio do formulário.
+ 
+
+ ## 📸 Pré-visualização
+
+- <img width="591" height="950" alt="Captura de tela de 2026-10-13 17-13-37" src="https://github.com/user-attachments/assets/6a094cfb-1521-446f-b225-38ebcec41e47" />
+
 
 ## 🛠️ Tecnologias Utilizadas
 
 - **HTML5**: Estruturação dos elementos e das páginas do formulário.
 
-- <img width="591" height="950" alt="Captura de tela de 2026-10-13 17-13-37" src="https://github.com/user-attachments/assets/6a094cfb-1521-446f-b225-38ebcec41e47" />
+
 
 ## 📂 Estrutura de Arquivos
 
@@ -20,5 +26,3 @@ O projeto é composto por duas páginas estáticas principais:
 formulario-html/
 ├── pagina04.html      # Página com o formulário de cadastro/contato
 ├── DadosContato.html  # Página de exibição dos dados recebidos
-
-<img width="591" height="950" alt="Captura de tela de 2026-10-13 17-13-37" src="https://github.com/user-attachments/assets/6a094cfb-1521-446f-b225-38ebcec41e47" />
