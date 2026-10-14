@@ -10,7 +10,11 @@ O exercício apresenta conceitos fundamentais de estilização web, abordando:
 - **Seletores Básicos:** Estilização de elementos como cabeçalhos (`h1`, `h2`, `h3`) e do corpo da página (`body`).
 - **Propriedades Visuais:** Modificação de cores de texto, cores de fundo (*background-color*) e organização de parágrafos explicativos.
 
-- <img width="1780" height="593" alt="Captura de tela de 2026-10-14 14-35-38" src="https://github.com/user-attachments/assets/fb9f56c8-43c2-4022-84da-86ba5546f6a4" />
+
+## 📸 Pré-visualização
+
+ <img width="1780" height="593" alt="Captura de tela de 2026-10-14 14-35-38" src="https://github.com/user-attachments/assets/fb9f56c8-43c2-4022-84da-86ba5546f6a4" />
+
 
 
 ## 🛠️ Tecnologias Utilizadas
