@@ -10,6 +10,13 @@ O exercício explora a aplicação visual de elementos estruturais e caixas em u
 - **Bordas e Espaçamentos:** Aplicação de diferentes tipos de bordas (`dashed`, `dotted`, `double`) e recuos em títulos (`h1`, `h2`, `h3`) e parágrafos (`p`).
 - **Uso de Classes:** Criação de um bloco personalizado (`.classediv`) para destacar uma seção específica do conteúdo.
 
+
+## 📸 Pré-visualização
+
+file:///home/breno/Imagens/Capturas%20de%20tela/Captura%20de%20tela%20de%202026-10-14%2014-51-43.png
+
+
+
 ## 🛠️ Tecnologias Utilizadas
 
 - **HTML5**: Estruturação do texto explicativo e divisão por blocos/classes (`div`).
