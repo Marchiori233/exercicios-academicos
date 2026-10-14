@@ -6,7 +6,7 @@ Este repositório contém uma atividade prática desenvolvida para a faculdade, 
 
 O projeto é composto por duas páginas estáticas principais:
 1. **`pagina04.html`:** Contém o formulário com os campos de entrada (*inputs*) para o usuário preencher.
-2. **`DadosContato.html`:** Página de destino que exibe os dados recebidos após o envio do formulário.
+2. **`DadosContato.html`:** Página de confirmação que exibe uma simples mensagem de recebimento de dados após o envio do formulário.
  
 
  ## 📸 Pré-visualização
