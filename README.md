@@ -9,6 +9,14 @@ O projeto consiste num website multi-páginas interligado com navegação intern
 - **Navegação Institucional:** Páginas de apresentação (`sobre.html`, `projeto.html`) e secção de notícias/atualizações (`noticias.html`). Na página `projeto.html`, encontram-se detalhadas as informações sobre o desenvolvimento e a dinâmica da equipe.
 - **Interação com o Utilizador:** Formulários de registo/cadastro de utilizadores (`cadastro.html`), páginas de contacto (`contato.html`) e confirmação de mensagens.
 
+
+
+## 📌 Sobre o Projeto
+
++<img width="626" height="759" alt="Captura de tela de 2026-10-16 11-32-18" src="https://github.com/user-attachments/assets/8fac651d-6343-431b-b38c-eb11846a9845" />
+                           Produtos da loja — uma parte do site.
+
+
 ## 🛠️ Tecnologias Utilizadas
 
 - **HTML5**: Estruturação e marcação semântica de todas as páginas da loja.
