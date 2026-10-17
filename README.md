@@ -11,7 +11,7 @@ O projeto consiste num website multi-páginas interligado com navegação intern
 
 
 
-## 📌 Sobre o Projeto
+## 📸 Pré-visualização
 
 +<img width="626" height="759" alt="Captura de tela de 2026-10-16 11-32-18" src="https://github.com/user-attachments/assets/8fac651d-6343-431b-b38c-eb11846a9845" />
                            
